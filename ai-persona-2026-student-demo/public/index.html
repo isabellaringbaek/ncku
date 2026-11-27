@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Persona</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">AI Persona</p>
+        <h1>Interview a simulated participant</h1>
+      </div>
+      <span class="demo-badge">Demo</span>
+    </header>
+
+    <section class="persona-card" aria-labelledby="persona-name">
+      <div class="portrait-frame">
+        <img
+          id="personaPortrait"
+          class="persona-portrait"
+          alt=""
+        />
+      </div>
+
+      <div class="persona-details">
+        <div class="persona-heading">
+          <div>
+            <h2 id="persona-name">Loading persona...</h2>
+            <p class="persona-meta" id="personaMeta"></p>
+          </div>
+          <div class="status" id="personaStatus">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="statusText">Loading...</span>
+          </div>
+        </div>
+
+        <p class="persona-summary" id="personaSummary"></p>
+      </div>
+    </section>
+
+    <section class="chat-card" aria-label="Conversation with persona">
+      <div class="conversation" id="conversation" aria-live="polite">
+        <article class="message-row persona-message-row">
+          <img id="initialAvatar" class="message-avatar" alt="" />
+          <div class="message-block">
+            <span class="message-author" id="initialAuthor">Persona</span>
+            <div class="message-bubble persona-bubble" id="initialMessage">
+              Loading persona...
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <form class="composer" id="chatForm">
+        <label class="sr-only" for="promptInput">Ask the persona something</label>
+        <textarea
+          id="promptInput"
+          name="prompt"
+          rows="1"
+          placeholder="Ask something..."
+          autocomplete="off"
+        ></textarea>
+        <button id="sendButton" type="submit">Send</button>
+      </form>
+      <p class="composer-hint">Press Enter to send · Shift + Enter for a new line</p>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

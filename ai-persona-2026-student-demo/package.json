@@ -1,0 +1,22 @@
+{
+  "name": "ai-persona-2026",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AI Persona 2.0 teaching and development project.",
+  "scripts": {
+    "start": "node src/index.js",
+    "prompt:agent": "node scripts/prompt-agent.js",
+    "test": "node --test test/chat-history.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@openai/agents": "^0.17.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "openai": "^7.10.0",
+    "zod": "^4.5.4"
+  }
+}
